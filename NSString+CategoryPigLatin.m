@@ -27,7 +27,7 @@
             [wordForEdit appendString:@"yay"];
         }
         else{
-            NSRange consonantRange = NSMakeRange(0, range.location);
+            NSRange consonantRange = NSMakeRange(0, range.location);//returns the range between the first consonant and 0
             range.length = [wordForEdit length] - range.location;
             
             wordForEdit = [NSMutableString stringWithFormat:@"%@%@ay", [wordForEdit substringWithRange:range], [wordForEdit substringWithRange:consonantRange]];
