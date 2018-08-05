@@ -1,5 +1,5 @@
 //
-//  NSObject+CategoryPigLatin.h
+//  InputHandler.h
 //  PigLatin
 //
 //  Created by Jamie on 2018-08-04.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (CategoryPigLatin)
+@interface InputHandler : NSObject
 
--(NSString *)stringByPigLatinization;
+- (NSString *) userInputForPrompt: (NSString *) prompt;
 
 @end

@@ -7,11 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "InputHandler.h"
+#import "NSString+CategoryPigLatin.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        
+        InputHandler *inputHandler = [[InputHandler alloc] init];
+        NSString *pigInputString = [inputHandler userInputForPrompt:@"Please enter the phrase to be piggy-fied:"];
+        NSLog (@"%@",[pigInputString stringByPigLatinization]);
     }
     return 0;
 }
+
+
